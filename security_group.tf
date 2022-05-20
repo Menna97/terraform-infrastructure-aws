@@ -11,6 +11,13 @@ resource "aws_security_group" "bastion_sg" {
     protocol    = "tcp"
   }
 
+  ingress {
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+  }
+
   # allow egress of all ports
   egress {
     from_port   = 0
