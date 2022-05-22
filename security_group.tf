@@ -90,8 +90,8 @@ resource "aws_security_group" "app_sg" {
 }
 
 resource "aws_security_group" "rds_sg" {
-  name = "rds_sg"
-  vpc_id      = module.network.vpc_id
+  name   = "rds_sg"
+  vpc_id = module.network.vpc_id
 
   # Only MySQL in
   ingress {
@@ -111,8 +111,8 @@ resource "aws_security_group" "rds_sg" {
 }
 
 resource "aws_security_group" "ec_sg" {
-  name = "ec_sg"
-  vpc_id      = module.network.vpc_id
+  name   = "ec_sg"
+  vpc_id = module.network.vpc_id
 
   # Only MySQL in
   ingress {
