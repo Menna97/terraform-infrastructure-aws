@@ -9,12 +9,12 @@ resource "aws_key_pair" "public_key_pair" {
 }
 
 resource "aws_secretsmanager_secret" "private_key" {
-  name                    = "my_private_key"
+  name                    = "private_key"
   recovery_window_in_days = 0
 }
 
 resource "aws_secretsmanager_secret" "public_key" {
-  name                    = "my_public_key"
+  name                    = "public_key"
   recovery_window_in_days = 0
 }
 
